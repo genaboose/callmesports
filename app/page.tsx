@@ -8,7 +8,7 @@ export default function Page() {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="/public/hero.jpg"
+            src="/hero.jpg"
             alt="Athlete with"
             className="w-full h-full object-cover"
           />
