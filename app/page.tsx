@@ -9,7 +9,7 @@ export default function Page() {
         <div className="absolute inset-0">
           <img
             src="/hero.jpg"
-            alt="Athlete lifting kettlebells"
+            alt="Athlete with"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/70 to-green-400/70" />
