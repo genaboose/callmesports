@@ -49,14 +49,35 @@ export default function Page() {
               CallMeSports verbindet dich mit echten Coaches oder einem 24/7 AI-Coach –
               für Training, das wirklich in dein Leben passt.
             </p>
-            <div className="mt-8 flex justify-center gap-4">
-              <a href="#pricing" className="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-blue-100 transition shadow-lg">
-                Start free trial
-              </a>
-              <a href="#contact" className="px-8 py-3 rounded-full border-2 border-white font-semibold hover:bg-white hover:text-blue-600 transition shadow-lg">
-                Book a coach
-              </a>
-            </div>
+<div className="mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+  <a
+    href="#pricing"
+    className="px-8 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-blue-100 transition shadow-lg"
+  >
+    Start free trial
+  </a>
+  <a
+    href="#contact"
+    className="px-8 py-3 rounded-full border-2 border-white font-semibold hover:bg-white hover:text-blue-600 transition shadow-lg"
+  >
+    Book a coach
+  </a>
+
+  {/* Neue Links */}
+  <a
+    href="/tracker"
+    className="px-8 py-3 rounded-full bg-green-500 text-white font-semibold hover:bg-green-600 transition shadow-lg"
+  >
+    📊 Tracker
+  </a>
+  <a
+    href="/tracker/last-days"
+    className="px-8 py-3 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 transition shadow-lg"
+  >
+    🗓️ Last Days
+  </a>
+</div>
+
           </div>
         </section>
 
