@@ -7,11 +7,10 @@ export default function Page() {
     {/* Logo */}
     <div className="flex items-center gap-2">
       <img
-        src="/logo.svg"   // oder /logo.png, je nachdem welches Format du nutzt
+        src="/logo-banner.png"   // oder /logo.png, je nachdem welches Format du nutzt
         alt="CallMeSports Logo"
-        className="h-8 w-auto"
+        className="h-10 w-auto"
       />
-      <span className="font-bold text-white text-lg">CallMeSports</span>
     </div>
 
     {/* Navigation */}
