@@ -1,8 +1,8 @@
 const CACHE_NAME = 'cms-v1';
 const OFFLINE_URLS = [
-  '/',                    // Startseite
-  '/tracker',             // Übersicht
-  '/tracker/last-days',   // Dein Last-Days-Tracker
+  '/',
+  '/tracker',
+  '/tracker/last-days',
   '/hero.jpg',
   '/logo-banner.png',
   '/logo-128.png',
@@ -34,28 +34,19 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-
-  // Nur GET cachen
   if (req.method !== 'GET') return;
-
-  // Strategie: Try cache first, then network fallback
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
       return fetch(req)
         .then((res) => {
-          // Dynamisches Caching für statische Dateien
           const resClone = res.clone();
           caches.open(CACHE_NAME).then((cache) => {
-            // Nur erfolgreiche Antworten cachen
             if (res.status === 200 && res.type === 'basic') cache.put(req, resClone);
           });
           return res;
         })
-        .catch(() => {
-          // Offline-Fallback: Startseite
-          return caches.match('/');
-        });
+        .catch(() => caches.match('/'))
     })
   );
 });
