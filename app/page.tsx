@@ -2,6 +2,27 @@ import { Sparkles, Dumbbell, Clock, Shield } from "lucide-react";
 
 export default function Page() {
   return (
+    <header className="absolute top-0 left-0 w-full z-20">
+  <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    {/* Logo */}
+    <div className="flex items-center gap-2">
+      <img
+        src="/logo.svg"   // oder /logo.png, je nachdem welches Format du nutzt
+        alt="CallMeSports Logo"
+        className="h-8 w-auto"
+      />
+      <span className="font-bold text-white text-lg">CallMeSports</span>
+    </div>
+
+    {/* Navigation */}
+    <nav className="hidden md:flex gap-6 text-sm font-medium text-white">
+      <a href="#features" className="hover:text-blue-200">Features</a>
+      <a href="#pricing" className="hover:text-blue-200">Pricing</a>
+      <a href="#faq" className="hover:text-blue-200">FAQ</a>
+      <a href="#contact" className="hover:text-blue-200">Contact</a>
+    </nav>
+  </div>
+</header>
     <div className="min-h-screen bg-white text-slate-900">
       {/* HERO */}
       <section className="relative h-[90vh] flex items-center justify-center text-center text-white">
@@ -9,7 +30,7 @@ export default function Page() {
         <div className="absolute inset-0">
           <img
             src="/hero.jpg"
-            alt="Athlete with"
+            alt="Athlete with Rope"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/70 to-green-400/70" />
